@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 岗位情报助手</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         background: #f5f7fa; color: #333; padding: 40px 16px; }
+  .box { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 22px; margin-bottom: 6px; }
+  .sub { color: #888; font-size: 13px; margin-bottom: 20px; }
+  .ask-row { display: flex; gap: 8px; margin-bottom: 20px; }
+  input { flex: 1; padding: 12px; font-size: 15px; border: 1px solid #ddd;
+          border-radius: 8px; outline: none; }
+  input:focus { border-color: #4a90d9; }
+  button { padding: 12px 24px; font-size: 15px; color: #fff; background: #4a90d9;
+           border: none; border-radius: 8px; cursor: pointer; }
+  button:disabled { background: #a0c4e8; cursor: wait; }
+  .card { background: #fff; border-radius: 10px; padding: 18px; margin-bottom: 14px;
+          box-shadow: 0 1px 4px rgba(0,0,0,.06); }
+  .answer { white-space: pre-wrap; line-height: 1.7; font-size: 15px; }
+  .src-title { font-size: 13px; color: #888; margin-bottom: 10px; }
+  .src { border-top: 1px solid #f0f0f0; padding: 10px 0; font-size: 14px; }
+  .src:last-child { padding-bottom: 0; }
+  .src .t { font-weight: 600; }
+  .src .c { color: #666; font-size: 13px; }
+  .tag { display: inline-block; background: #eef4fd; color: #4a90d9; font-size: 12px;
+         padding: 2px 8px; border-radius: 4px; margin: 4px 4px 0 0; }
+  .loading { color: #888; font-size: 14px; }
+  .hint { color: #aaa; font-size: 13px; text-align: center; margin-top: 30px; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>🤖 AI 岗位情报助手</h1>
+  <div class="sub">基于 40 条岗位数据的 RAG 问答 · 检索不到会老实承认</div>
+
+  <div class="ask-row">
+    <input id="q" placeholder="比如：最近 Java 实习岗都要求哪些技术？" onkeydown="if(event.key==='Enter')ask()">
+    <button id="btn" onclick="ask()">提问</button>
+  </div>
+
+  <div id="result"></div>
+  <div class="hint" id="hint">试试问"Python 岗要求哪些技术"或"量子计算机岗有哪些"</div>
+</div>
+
+<script>
+async function ask() {
+  const q = document.getElementById('q').value.trim();
+  if (!q) return;
+  const btn = document.getElementById('btn');
+  const box = document.getElementById('result');
+  btn.disabled = true;
+  box.innerHTML = '<div class="card loading">检索中…</div>';
+  document.getElementById('hint').style.display = 'none';
+  try {
+    const r = await fetch('/ask', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({question: q})
+    });
+    const d = await r.json();
+    let html = '<div class="card"><div class="answer">' + esc(d.answer) + '</div></div>';
+    if (d.sources && d.sources.length) {
+      html += '<div class="card"><div class="src-title">📎 引用来源（Top ' + d.sources.length + '）</div>';
+      d.sources.forEach(s => {
+        html += '<div class="src"><div class="t">' + esc(s.title) + '</div>'
+              + '<div class="c">' + esc(s.company) + '</div><div>'
+              + s.tech_keywords.split(',').map(t =>
+                  '<span class="tag">' + esc(t.trim()) + '</span>').join('')
+              + '</div></div>';
+      });
+      html += '</div>';
+    }
+    box.innerHTML = html;
+  } catch (e) {
+    box.innerHTML = '<div class="card loading">请求失败，看看后端是不是没启动：' + esc(e.message) + '</div>';
+  }
+  btn.disabled = false;
+}
+function esc(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "title": "大模型应用开发工程师",
+    "company": "某AI SaaS创业公司",
+    "city": "北京",
+    "tech_keywords": ["Python", "LangChain", "RAG", "Prompt Engineering", "Agent"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/1",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 2,
+    "title": "AI 应用开发工程师",
+    "company": "某互联网大厂",
+    "city": "深圳",
+    "tech_keywords": ["Python", "Dify", "Coze", "Function Calling", "Webhook"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/2",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 3,
+    "title": "RAG 系统开发工程师",
+    "company": "某企业服务独角兽",
+    "city": "上海",
+    "tech_keywords": ["Python", "RAG", "Embedding", "向量数据库", "LangChain"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/3",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 4,
+    "title": "LLM 应用开发（初级）",
+    "company": "某AI SaaS创业公司",
+    "city": "杭州",
+    "tech_keywords": ["Python", "LangChain", "Prompt Engineering", "RAG"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/4",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 5,
+    "title": "智能客服 RAG 开发",
+    "company": "某金融科技公司",
+    "city": "上海",
+    "tech_keywords": ["Python", "RAG", "Embedding", "向量数据库", "Prompt Engineering"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/5",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 6,
+    "title": "Agent 开发工程师",
+    "company": "某互联网大厂",
+    "city": "北京",
+    "tech_keywords": ["Python", "Agent", "Function Calling", "LangChain", "Dify"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/6",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 7,
+    "title": "向量数据库研发工程师",
+    "company": "某数据库创业公司",
+    "city": "北京",
+    "tech_keywords": ["Python", "向量数据库", "Embedding", "RAG", "C++"],
+    "degree": "硕士",
+    "url": "https://jobs.example.com/jd/7",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 8,
+    "title": "数据自动化工程师",
+    "company": "某企业服务独角兽",
+    "city": "广州",
+    "tech_keywords": ["Python", "数据自动化", "RPA", "Webhook", "requests"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/8",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 9,
+    "title": "RPA 开发工程师",
+    "company": "某智能制造公司",
+    "city": "苏州",
+    "tech_keywords": ["Python", "RPA", "数据自动化", "Webhook"],
+    "degree": "大专",
+    "url": "https://jobs.example.com/jd/9",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 10,
+    "title": "大模型平台运营开发",
+    "company": "某AI大模型厂商",
+    "city": "北京",
+    "tech_keywords": ["Python", "Prompt Engineering", "Dify", "Coze", "Function Calling"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/10",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 11,
+    "title": "知识库 RAG 工程师",
+    "company": "某在线教育公司",
+    "city": "北京",
+    "tech_keywords": ["Python", "RAG", "LangChain", "Embedding", "向量数据库"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/11",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 12,
+    "title": "LLM 应用开发实习生",
+    "company": "某AI SaaS创业公司",
+    "city": "深圳",
+    "tech_keywords": ["Python", "LangChain", "Prompt Engineering", "RAG"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/12",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 13,
+    "title": "AI 产品开发工程师",
+    "company": "某互联网大厂",
+    "city": "杭州",
+    "tech_keywords": ["Python", "Dify", "Coze", "Agent", "Webhook"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/13",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 14,
+    "title": "检索增强开发工程师",
+    "company": "某企业服务独角兽",
+    "city": "上海",
+    "tech_keywords": ["Python", "RAG", "Embedding", "向量数据库"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/14",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 15,
+    "title": "Prompt 工程师",
+    "company": "某AI内容创业公司",
+    "city": "北京",
+    "tech_keywords": ["Python", "Prompt Engineering", "Dify", "Coze"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/15",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 16,
+    "title": "AI 应用后端开发",
+    "company": "某金融科技公司",
+    "city": "深圳",
+    "tech_keywords": ["Python", "LangChain", "RAG", "Function Calling", "Webhook"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/16",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 17,
+    "title": "智能体（Agent）开发",
+    "company": "某AI大模型厂商",
+    "city": "北京",
+    "tech_keywords": ["Python", "Agent", "Function Calling", "LangChain", "RAG"],
+    "degree": "硕士",
+    "url": "https://jobs.example.com/jd/17",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 18,
+    "title": "数据抓取与自动化工程师",
+    "company": "某招聘平台公司",
+    "city": "广州",
+    "tech_keywords": ["Python", "requests", "数据自动化", "RPA", "beautifulsoup4"],
+    "degree": "大专",
+    "url": "https://jobs.example.com/jd/18",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 19,
+    "title": "向量检索应用开发",
+    "company": "某电商大厂",
+    "city": "杭州",
+    "tech_keywords": ["Python", "向量数据库", "Embedding", "RAG", "LangChain"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/19",
+    "crawled_at": "2026-10-15"
+  },
+  {
+    "id": 20,
+    "title": "大模型应用开发（校招）",
+    "company": "某互联网大厂",
+    "city": "北京",
+    "tech_keywords": ["Python", "LangChain", "RAG", "Prompt Engineering", "Embedding"],
+    "degree": "本科",
+    "url": "https://jobs.example.com/jd/20",
+    "crawled_at": "2026-10-15"
+  }
+]
